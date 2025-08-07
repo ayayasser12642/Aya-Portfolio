@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 10px;
+            background-color: antiquewhite;
+            color:brown
+        }
+        header {
+            background-color: white;
+            color: brown;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        h1 {
+            font-size: 36px;
+            color:brown;
+        }
+        h2 {
+            color:brown;
+            border-bottom: none;
+            padding-bottom: 5px;
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            color:brown;
+            margin-bottom: 15px;
+        }
+    
+        ul {
+            list-style-type: square;
+            padding-left: 20px;
+        }
+        a {
+            color: #2980b9;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+            color: #1c5980;
+        }
+        .profile-pic {
+            width: 170px;
+            height: 170px;
+            border-radius: 50%;
+            display: block;
+            margin: 0 auto 20px auto;
+            object-fit: cover;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .buttons button {
+            padding: 10px 25px;
+            margin-top: 10px;
+            background-color: brown;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .buttons button:hover {
+            background-color: #8b0000;
+            transform: scale(1.05);
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Hello I'm Aya</h1>
+        <p>Junior Web Developer from Egypt</p>
+    </header>
+
+
+    <section>
+        <img src="images/profile.jpg" alt="Aya's photo" class="profile-pic">
+    <div class="buttons">
+        <button onclick="toggleAbout()">Show 
+    About Me</button>        
+    </div> 
+    </div>
+    <div id="about-text" style="display: none;">
+        <h2>About Me</h2>
+        <p>I'm passionate about building web applications and learning new technologies. I love turning ideas into real websites.</p>
+    </div>   
+    
+    </div> 
+    <div class="buttons">
+        <button onclick="toggleSkills()">Show
+    Skills</button>
+</div>
+    <section>
+    <div id="skills-section" style="display: none;">
+        <h2>My Skills</h2>
+        <ul>
+            <li>HTML & CSS</li>
+            <li>JavaScript (in progress)</li>
+            <li>Python & Flask</li>
+            <li>SQL Basics</li>
+            <li>Teamwork & problem solving</li>
+        </ul>
+    </div>    
+    <div class="buttons">
+        <button onclick="toggleContact()">Show Contact info
+            </button>
+    </div>
+    <section>
+    <div id="contact-section" style="display: none;">
+        <h2>Contact Me</h2>
+        <p>You can reach me at:</p>
+        <ul>
+            <li>Email: aya.yasser.mokhtar125@gmail.com</li>
+            <li>number: 01016216081 or 01124333128</li>
+        </ul>
+    </div>    
+
+    </section>
+    <script>
+        function toggleAbout() {
+            const about = document.getElementById('about-text');
+            if (about.style.display=== 'none')
+            {
+                about.style.display = 'block';
+            } else {
+                about.style.display = 'none'
+            }
+        }
+        function toggleSkills() {
+            const skills = document.getElementById('skills-section');
+            if (skills.style.display=== 'none')
+            {
+                skills.style.display = 'block';
+            } else {
+                skills.style.display = 'none'
+            }
+        }
+        function toggleContact() {
+            const contact = document.getElementById('contact-section');
+            if (contact.style.display=== 'none')
+        {
+            contact.style.display = 'block';
+        } else {
+            contact.style.display = 'none'
+        }
+        }
+    </script>          
+</body>
+    
+</html>    
